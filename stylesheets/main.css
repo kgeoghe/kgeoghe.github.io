@@ -1,0 +1,278 @@
+body {
+  background-color: #ffffff;
+  color: #3f3f3f;
+  font-family: sans-serif;
+  font-size: 115%;
+  font-style: normal;
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 600px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, a:visited {
+  color: #007f7f;
+  text-decoration: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,  h1 a, h1 a:visited, h1 a:hover {
+  color: inherit;
+  font-weight: inherit;
+  margin: 0;
+  text-decoration: inherit;
+}
+
+
+#site-header {
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 1.5em;
+  padding-top: 3em;
+  text-align: center;
+}
+
+#site-header #site-title {
+  font-size: 2.5em;
+  line-height: 1em;
+  padding: .5em 2%;
+}
+
+#site-header #site-subtitle {
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0;
+}
+
+
+.post,
+.post-archive,
+.page {
+  padding: 2em 0;
+}
+
+.post h1,
+.page h1,
+.post-archive h1 {
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.post h2,
+.page h2 {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.post h3,
+.page h3 {
+  font-size: 1em;
+  font-weight: 550;
+  line-height: 1em;
+}
+
+blockquote {
+  border-left: 1px solid #007f7f;
+  font-style: italic;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 2em;
+}
+
+.figimg {
+  height: auto;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+.figimg img {
+  height: auto;
+  max-width: 100%;
+}
+
+.lte-ie8 img {
+  width: auto;
+}
+
+.figimg figcaption {
+  font-weight: 300;
+  font-size: .75em;
+  line-height: 1.1em;
+}
+
+.post footer {
+  font-size: .90em;
+  font-weight: 300;
+}
+
+.post-index footer {
+    font-weight: 300;
+}
+
+
+.post-archive #search {
+  border: 0;
+  font-size: .95em;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 2em 1em 0.5em 1em;
+}
+
+.post-archive #search fieldset[role="search"] {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.post-archive #search input.search {
+  box-sizing: border-box;
+  font-size: .90em;
+  font-weight: inherit;
+  width: 100%;
+}
+
+.post-archive ul {
+  margin-bottom: 0;
+  padding: 0 1em;
+}
+
+.post-archive li {
+  clear: both;
+  list-style: none;
+}
+
+.post-archive li a,
+.post-archive li a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-archive li a:hover {
+  text-decoration: underline;
+}
+
+.post-archive li .post-date {
+  float: right;
+  font-weight: 300;
+}
+
+
+.pagination {
+  font-weight: 300;
+  font-size: .9em;
+  padding: 2em 0 1em 0;
+  text-align: center;
+}
+
+
+#site-footer {
+  border-top: 1px solid #cfcfcf;
+  padding: 1em 0 4em 0;
+}
+
+#site-license-image {
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+}
+
+#site-license-image img {
+  border-width: 0;
+  height: 32px;
+  margin: 2px;
+}
+
+#site-license-text {
+  display: inline-block;
+  float: left;
+  font-size: .64em;
+  line-height: 17px;
+  max-width: 55%;
+  padding: 2px .8em;
+}
+
+#profiles {
+  display: inline-block;
+  float: right;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+#profiles li {
+  display: block;
+  float: left;
+  list-style: none;
+}
+
+#profiles a,
+#profiles a:visited,
+#profiles a:hover {
+  text-decoration: none;
+}
+
+#profiles img {
+  border: 0;
+  height: 30px;
+  margin: 2px;
+}
+
+
+/* Borrowed from HTML5 Boilerplate /*
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* For IE 6/7 only */
+.clearfix {
+    *zoom: 1;
+}
+
+@media only screen and (max-width: 638px) {
+  body {
+    max-width: 94%;
+  }
+
+
+  #site-header #site-subtitle {
+    font-size: .9em;
+  }
+
+
+  .post-archive li {
+    padding: .5em 0;
+  }
+
+  .post-archive li .post-date {
+    float: none;
+    font-size: .75em;
+  }
+
+  .post-archive li .post-date:before {
+    content: '(';
+  }
+
+  .post-archive li .post-date:after {
+    content: ')';
+  }
+
+
+  #site-license-text {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}"{% if site.open_graph %} prefix="og: http://ogp.me/ns#{% if include.type == "article" %} article: http://ogp.me/ns/article#{% endif %}"{% endif %}>
+<head>
+  <meta charset="utf-8" />
+
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title | strip_html }}</title>
+  <meta name="author" content="{{ site.owner.name }}" />
+  {% if page.description %}<meta name="description" content="{{ page.description | strip_html | condense_spaces }}" />{% endif %}
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}" />{% endif %}
+
+  <link rel="canonical" href="{% include absurl.html url=page.url %}" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+{% include custom/favicons.html %}
+{% if site.open_graph %}{% include open-graph.html type=include.type %}{% endif %}
+{% if site.twitter_cards %}{% include twitter-cards.html %}{% endif %}
+{% if site.analytics.facebook_insights %}{% include facebook-insights.html %}{% endif %}
+
+{% if site.analytics.google_analytics.in_head %}{% include google-analytics.html %}{% endif %}
+
+  {% if include.type == "namecard" %}<link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="/stylesheets/namecard.css" />
+  {% else %}<link rel="stylesheet" href="/stylesheets/normalize.css" />
+  <link rel="stylesheet" href="/stylesheets/main.css" />{% endif %}
+</head>
+<body>

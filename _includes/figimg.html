@@ -1,0 +1,4 @@
+<figure class="figimg">
+  {% if figimg_link %}<a href="{{ figimg_link }}">{% endif %}<img src="{{ figimg_url }}" alt="{{ figimg_alt }}"{% if figimg_title %} title="{{ figimg_title }}"{% endif %}{% if figimg_width %} width="{{ figimg_width }}"{% endif %}{% if figimg_height %} height="{{ figimg_height }}"{% endif %} />{% if figimg_link %}</a>{% endif %}
+  {% if figimg_caption %}<figcaption>{{ figimg_caption }}</figcaption>{% endif %}
+</figure>

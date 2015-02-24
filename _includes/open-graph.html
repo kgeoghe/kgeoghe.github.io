@@ -1,0 +1,15 @@
+{% case include.type %}
+{% when "article" %}
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:url" content="{{ site.url }}{% unless page.url == "/index.html" %}{{ page.url }}{% endunless %}" />
+  {% if page.image %}<meta property="og:image" content="{{site.url}}{{ page.image }}" />{% endif %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+{% else %}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ site.title }}" />
+  <meta property="og:url" content="{{ site.url }}{% unless page.url == "/index.html" %}{{ page.url }}{% endunless %}" />
+  {% if site.image %}<meta property="og:image" content="{{ site.image }}" />{% endif %}
+  {% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
+{% endcase %}

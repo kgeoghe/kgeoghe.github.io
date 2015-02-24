@@ -1,0 +1,49 @@
+url: http://keving.org
+feed_url: http://keving.org/feed
+# twitter: site_twitter_handle
+
+lang: en
+
+title: point
+title_tooltip: ... now if only I could find a long enough lever...
+subtitle: Things and thoughts <a href="/about">I</a> think you'll like
+
+owner:
+    name: Kevin Geoghegan
+    email: kgeoghe@gmail.com
+    email_with_word_breaks: <span>kgeoghe</span><span>@gmail.com</span>
+    google_plus:
+        url: KevinGeoghegan
+        number: 102307140318741294467
+    twitter: readysetgeo
+    linkedin: Kevin Geoghegan
+
+open_graph: true
+twitter_cards: true
+
+future: false
+highlighter: pygments
+
+permalink: /b/:title/
+
+markdown: kramdown
+
+kramdown:
+    auto_ids: true
+    footnote_nr: 1
+    toc_levels: 1..3
+    smart_quotes: lsquo,rsquo,ldquo,rdquo
+    use_coderay: false
+
+    coderay:
+        coderay_wrap: div
+        coderay_line_numbers: inline
+        coderay_line_numbers_start: 1
+        coderay_tab_width: 4
+        coderay_bold_every: 10
+        coderay_css: style
+
+
+port: 8888
+
+# For more things to configure (including date format), see _includes/custom/*

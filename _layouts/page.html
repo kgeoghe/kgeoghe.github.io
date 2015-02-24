@@ -1,0 +1,11 @@
+{% include head.html %}
+{% include site-header.html %}
+
+  <article class="page main-content" role="main">
+    <h1><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h1>
+
+{{ content }}
+  </article>
+
+{% include site-footer.html %}
+{% include tail.html %}
