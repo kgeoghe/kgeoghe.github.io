@@ -1,0 +1,22 @@
+{% include head.html %}
+{% include site-header.html %}
+
+  <article class="post-archive main-content" role="main">
+    <h1><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h1>
+
+    <form id="search" action="https://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="as_sitesearch" value="{{ site.url | remove: 'http:' | remove: 'https:' | remove: '//' }}">
+        <input type="search" name="q" class="search" placeholder="Search" accesskey="/" />
+      </fieldset>
+    </form>
+
+    <ul>
+    {% for post in site.posts limit:page.max_number_of_posts %}
+      <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="post-date">{% include post/pubdate.html datetime=post.date format="%Y-%m-%d" %}</span></a></li>
+    {% endfor %}
+    </ul>
+  </article>
+
+{% include site-footer.html %}
+{% include tail.html %}

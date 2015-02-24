@@ -1,0 +1,19 @@
+{% include head.html %}
+{% include site-header.html %}
+
+  <section class="post-index main-content" role="main">
+    {% for post in site.posts limit:page.max_number_of_posts %}
+    <article class="post">
+      <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
+
+{{ post.content }}
+      <footer>
+        <a href="{{ site.url }}{{ post.url }}">∞ {% include post/pubdate.html datetime=post.date format="%Y-%m-%d" %}</a>
+      </footer>
+    </article>
+    {% endfor %}
+  </section>
+
+{% include pagination.html %}
+{% include site-footer.html %}
+{% include tail.html %}

@@ -1,0 +1,4 @@
+  <header id="site-header" role="banner">
+    <h1 id="site-title"><a href="/"{% if site.title_tooltip %} title="{{ site.title_tooltip }}"{% endif %}>{{ site.title }}</a></h1>
+    {% if site.subtitle %}<div id="site-subtitle">{{site.subtitle}}</div>{% endif %}
+  </header>

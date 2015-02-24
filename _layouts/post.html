@@ -1,0 +1,15 @@
+{% include head.html type="article" %}
+{% include site-header.html %}
+
+  <article class="post main-content" role="main">
+    <h1><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h1>
+
+{{ content }}
+    <footer>
+      <a href="{{ site.url }}{{ page.url }}">∞ {% include post/pubdate.html datetime=page.date format="%Y-%m-%d" %}</a>
+    </footer>
+  </article>
+
+{% include pagination.html %}
+{% include site-footer.html %}
+{% include tail.html %}
